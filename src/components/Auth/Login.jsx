@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 const Login = ({handleLogin}) => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -46,7 +46,37 @@ const Login = ({handleLogin}) => {
             Login
           </button>
         </form>
+          <div className="mt-6 w-full text-sm text-gray-300 grid grid-cols-2 gap-5 grid-rows-1">
+  {/* Employee Credentials */}
+  <div className="rounded-lg border border-emerald-600/50 bg-emerald-950/30 p-4">
+    <h3 className="mb-2 text-base font-semibold text-emerald-400">
+      Employee Credentials
+    </h3>
+
+    <p>
+      Email: <span className="text-white">e@e.com</span>
+    </p>
+    <p>
+      Password: <span className="text-white">123</span>
+    </p>
+  </div>
+
+  {/* Admin Credentials */}
+  <div className="rounded-lg border border-blue-500/50 bg-blue-950/30 p-4">
+    <h3 className="mb-2 text-base font-semibold text-blue-400">
+      Admin Credentials
+    </h3>
+
+    <p>
+      Email: <span className="text-white">admin1@example.com</span>
+    </p>
+    <p>
+      Password: <span className="text-white">123</span>
+    </p>
+  </div>
+</div>
       </div>
+      
     </div>
   );
 };
